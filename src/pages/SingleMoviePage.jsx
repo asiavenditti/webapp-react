@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 
 export default function SingleMoviePage() {
     const { id } = useParams()
-    const [movie, setMovie] = useState('')
+    const [movie, setMovie] = useState(null)
 
     useEffect(() => {
         fetch(`http://localhost:3000/api/movies/${id}`)
@@ -15,8 +15,12 @@ export default function SingleMoviePage() {
             })
     }, [id])
 
+    if (!movie) {
+        return <div className="text-center mt-5">Nessun film </div>
+    }
 
     return (
+
         <div className="container mt-4">
             {/* Card Film */}
             <div className="card mb-4 mx-auto" style={{ maxWidth: '600px' }}>

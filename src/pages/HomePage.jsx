@@ -14,7 +14,7 @@ export default function HomePage() {
 
     return (
         <div className="container mt-4">
-            <h1 className="mb-4">🎬 Lista Film</h1>
+            <h1 className="mb-5 py-2 text-center"> Esplora il nostro catalogo🎬</h1>
             <div className="row">
                 {movies.map((movie) => (
                     <div className="col-md-4 mb-4" key={movie.id}>
