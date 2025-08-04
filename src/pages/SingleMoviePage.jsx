@@ -32,7 +32,19 @@ export default function SingleMoviePage() {
             {/* Sezione Recensioni */}
             <section className="reviews-section mx-auto" style={{ maxWidth: '800px' }}>
                 <h3 className='text-center'>Recensioni</h3>
+                {movie.reviews.map((review) => (
+                    <div key={review.id} className="card mb-3 p-3">
+                        <div className="d-flex justify-content-between align-items-center mb-2">
+                            <strong>{review.name}</strong>
+                            <span className="badge bg-success rounded-pill">{review.vote}⭐</span>
 
+                        </div>
+                        <p>{review.text}</p>
+                        <div className="text-muted small">
+                            Recensito il {review.created_at}
+                        </div>
+                    </div>
+                ))}
 
             </section>
         </div>
