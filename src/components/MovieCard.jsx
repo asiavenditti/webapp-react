@@ -11,9 +11,10 @@ export default function MovieCard({ movie }) {
             <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{movie.title}</h5>
                 <p className="card-text">Anno: {movie.release_year}</p>
-                <Link to={`/movie/${movie.id}`} className="btn btn-primary mt-auto">
+                <Link to={`api/movies/${movie.id}`} className="btn btn-primary mt-auto">
                     Scopri di più
                 </Link>
+
             </div>
         </div>
     )
