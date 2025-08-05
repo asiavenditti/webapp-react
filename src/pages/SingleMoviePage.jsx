@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import FormReview from '../components/FormReview'
 
 export default function SingleMoviePage() {
     const { id } = useParams()
@@ -50,7 +51,10 @@ export default function SingleMoviePage() {
                     </div>
                 ))}
 
+                {/* Form per lasciare una recensione*/}
+                <FormReview setMovie={setMovie} movieId={id} />
             </section>
-        </div>
+
+        </div >
     )
 }
