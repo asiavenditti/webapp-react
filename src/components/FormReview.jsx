@@ -37,6 +37,7 @@ export default function FormReview({ setMovie, movieId }) {
                     ]
 
                 }))
+                setFormData({ name: '', vote: '1', text: '' })
             })
             .catch(err => {
                 console.error('Errore', err)
