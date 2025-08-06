@@ -3,11 +3,12 @@ import SingleMoviePage from "./pages/SingleMoviePage"
 import HomePage from "./pages/HomePage"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import { LoaderProvider } from "./context/LoaderContext"
+import 'ldrs/react/Quantum.css'
 
 function App() {
-
   return (
-    <>
+    <LoaderProvider>
       <BrowserRouter>
         <Header />
         <Routes>
@@ -16,7 +17,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </>
+    </LoaderProvider>
   )
 }
 
